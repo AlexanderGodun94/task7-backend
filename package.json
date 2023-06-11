@@ -1,0 +1,26 @@
+{
+  "name": "kyb-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express-jwt": "^5.3.3",
+    "express.oi": "0.0.21",
+    "form-data": "^4.0.0",
+    "image-size": "^0.8.3",
+    "multer": "^1.4.2",
+    "node-schedule": "^2.0.0",
+    "nodemailer": "^6.6.0",
+    "pg": "^8.2.1",
+    "pseudo-random": "^0.6.0",
+    "resize-img": "^2.0.0",
+    "seedrandom": "^3.0.5",
+    "sequelize": "^6.28.0",
+    "socket.io": "^4.6.2",
+    "winston": "^3.8.2"
+  }
+}

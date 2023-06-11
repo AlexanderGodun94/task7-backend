@@ -1,0 +1,389 @@
+{
+  "tags": [
+    {
+      "name": "user"
+    }
+
+  ],
+  "paths": {
+
+    "/api/v1/user": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          },
+          "400": {
+            "$ref": "#/responses/BAD_DATA",
+            "x-oad-type": "reference"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "x-oad-type": "object",
+              "type": "object",
+              "properties": {
+                "username": {
+                  "x-oad-type": "string",
+                  "type": "string",
+                  "enum": [
+                    "username123"
+                  ],
+                  "default": "username123"
+                }
+              }
+            },
+            "x-oad-type": "parameter"
+          }
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+    "/api/v1/user/gameTypes": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          }
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+
+    "/api/v1/user/session": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": true,
+
+            "x-oad-type": "parameter"
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          },
+          "400": {
+            "$ref": "#/responses/BAD_DATA",
+            "x-oad-type": "reference"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "gameTypeId",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "x-oad-type": "parameter"
+          }
+
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+    "/api/v1/user/sessions": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          }
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+
+    "/api/v1/user/session/connect": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          },
+          "400": {
+            "$ref": "#/responses/BAD_DATA",
+            "x-oad-type": "reference"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "sessionId",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "x-oad-type": "parameter"
+          }
+
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+
+    "/api/v1/user/game/ticTacToe": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": true,
+
+            "x-oad-type": "parameter"
+          }
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+
+    "/api/v1/user/game/ticTacToe/move": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          },
+          "400": {
+            "$ref": "#/responses/BAD_DATA",
+            "x-oad-type": "reference"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "sessionId",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "x-oad-type": "parameter"
+          }
+
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+
+
+    "/api/v1/user/game/ticTacToe5x5": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": true,
+
+            "x-oad-type": "parameter"
+          }
+        ]
+      },
+      "x-oad-type": "operation"
+    },
+
+
+    "/api/v1/user/game/ticTacToe5x5/move": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "x-oad-type": "response"
+          },
+          "400": {
+            "$ref": "#/responses/BAD_DATA",
+            "x-oad-type": "reference"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization",
+            "x-oad-type": "reference"
+          },
+          {
+            "name": "sessionId",
+            "in": "body",
+            "required": true,
+            "type": "string",
+            "x-oad-type": "parameter"
+          }
+
+        ]
+      },
+      "x-oad-type": "operation"
+    }
+
+
+  },
+  "parameters": {
+    "Authorization": {
+      "name": "Authorization",
+      "in": "header",
+      "description": "Bearer eyJhbGciOiJIUzI1InR5cCI6Ikpb25lIjoiMzc1MzM0NiIsImVtm9iaW40LXZZXJpZFBob25",
+      "required": true,
+      "type": "string",
+      "x-oad-type": "parameter"
+    }
+  },
+  "responses": {
+    "BAD_DATA": {
+      "description": "bad data",
+      "schema": {
+        "x-oad-type": "object",
+        "type": "object",
+        "properties": {
+          "message": {
+            "x-oad-type": "string",
+            "type": "string",
+            "enum": [
+              "BAD_DATA"
+            ],
+            "default": "BAD_DATA"
+          },
+          "stack": {
+            "x-oad-type": "string",
+            "type": "string",
+            "enum": [
+              "AppError: BAD_DATA\\n    at app.route.post (/mnt/diskD/git/sto-backend/app/controllers/user.js:29:39)\\n    at Layer.handle [as handle_request] (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/layer.js:95:5)\\n    at next (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/route.js:137:13)\\n    at Route.dispatch (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/route.js:112:3)\\n    at Layer.handle [as handle_request] (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/layer.js:95:5)\\n    at /mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:281:22\\n    at Function.process_params (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:335:12)\\n    at next (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:275:10)\\n    at /mnt/diskD/git/sto-backend/app.js:32:3\\n    at Layer.handle [as handle_request] (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:317:13)\\n    at /mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:335:12)\\n    at next (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:275:10)\\n    at /mnt/diskD/git/sto-backend/node_modules/body-parser/lib/read.js:130:5\\n    at invokeCallback (/mnt/diskD/git/sto-backend/node_modules/raw-body/index.js:224:16)\\n    at done (/mnt/diskD/git/sto-backend/node_modules/raw-body/index.js:213:7)\\n    at IncomingMessage.onEnd (/mnt/diskD/git/sto-backend/node_modules/raw-body/index.js:273:7)\\n    at IncomingMessage.emit (events.js:203:15)\\n    at endReadableNT (_stream_readable.js:1145:12)\\n    at process._tickCallback (internal/process/next_tick.js:63:19)"
+            ],
+            "default": "AppError: BAD_DATA\\n    at app.route.post (/mnt/diskD/git/sto-backend/app/controllers/user.js:29:39)\\n    at Layer.handle [as handle_request] (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/layer.js:95:5)\\n    at next (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/route.js:137:13)\\n    at Route.dispatch (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/route.js:112:3)\\n    at Layer.handle [as handle_request] (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/layer.js:95:5)\\n    at /mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:281:22\\n    at Function.process_params (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:335:12)\\n    at next (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:275:10)\\n    at /mnt/diskD/git/sto-backend/app.js:32:3\\n    at Layer.handle [as handle_request] (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:317:13)\\n    at /mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:284:7\\n    at Function.process_params (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:335:12)\\n    at next (/mnt/diskD/git/sto-backend/node_modules/express/lib/router/index.js:275:10)\\n    at /mnt/diskD/git/sto-backend/node_modules/body-parser/lib/read.js:130:5\\n    at invokeCallback (/mnt/diskD/git/sto-backend/node_modules/raw-body/index.js:224:16)\\n    at done (/mnt/diskD/git/sto-backend/node_modules/raw-body/index.js:213:7)\\n    at IncomingMessage.onEnd (/mnt/diskD/git/sto-backend/node_modules/raw-body/index.js:273:7)\\n    at IncomingMessage.emit (events.js:203:15)\\n    at endReadableNT (_stream_readable.js:1145:12)\\n    at process._tickCallback (internal/process/next_tick.js:63:19)"
+          },
+          "details": {
+            "x-oad-type": "object",
+            "type": "object"
+          },
+          "error": {
+            "x-oad-type": "object",
+            "type": "object"
+          }
+        }
+      },
+      "x-oad-type": "response"
+    }
+  },
+  "definitions": {
+  },
+  "info": {
+    "title": "TASK7",
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "url": "????:????/api/v1/documentation"
+  },
+  "basePath": "/????:????",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "swagger": "2.0"
+}
